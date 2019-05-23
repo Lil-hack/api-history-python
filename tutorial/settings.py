@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
     'rest_framework',
-    'users.apps.UsersConfig',
+    'history.apps.HistoryConfig',
 ]
 
 MIDDLEWARE = [
@@ -77,17 +77,17 @@ WSGI_APPLICATION = 'tutorial.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'd7nptpebo2a5tm',
-        'USER': 'bbtlechablpjwh',
-        'PASSWORD': '7dd255625c421946a5c629552a65f00ee7ec59c2ef1714fb999f38180db374fb',
-        'HOST': 'ec2-54-75-245-196.eu-west-1.compute.amazonaws.com',
+        'NAME': 'mydb',
+        'USER': 'myuser',
+        'PASSWORD': 'mypass',
+        'HOST': 'ec2-3-120-31-216.eu-central-1.compute.amazonaws.com',
         'PORT': '5432',
     }
 }
-
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
 
