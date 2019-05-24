@@ -10,7 +10,7 @@ class HistorySerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = History
-        fields = ('uuid', 'created',  'user_uuid', 'video_uuid','url_search_foto','url_find_foto')
+        fields = ('uuid',  'user_uuid', 'video_uuid', 'created','url_search_foto','url_find_foto')
 
 
 
