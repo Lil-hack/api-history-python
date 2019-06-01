@@ -40,7 +40,7 @@ class HistoryViewSet(viewsets.ModelViewSet):
         if int(page)==0:
             return Response('[]',status=status.HTTP_204_NO_CONTENT)
         queryset = History.objects.filter(user_uuid=uuid).order_by('-created')
-        paginator = Paginator(queryset, 10)
+        paginator = Paginator(queryset, 4)
 
         if int(page)>paginator.num_pages:
             return Response('[]',status=status.HTTP_204_NO_CONTENT)
