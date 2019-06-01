@@ -48,7 +48,23 @@ class HistoryViewSet(viewsets.ModelViewSet):
         serializer = HistorySerializer(paginator.get_page(page), many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
 
+    @action(methods=['get'], detail=True, url_path='count')
+    def listCount(self, request, *args, **kwargs):
+        # find all categories first
 
+        # then, filter the categories itself.
+
+
+        for item in kwargs.values():
+                uuid = item
+
+
+
+        queryset = History.objects.filter(user_uuid=uuid).order_by('-created')
+        paginator = Paginator(queryset, 4)
+
+
+        return Response(paginator.num_pages, status=status.HTTP_200_OK)
 
 
     def perform_create(self, serializer):
